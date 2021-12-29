@@ -8,13 +8,13 @@ export const tokenize = (raw: string): string[] => {
   return tokens;
 };
 
-export const main = (instructions: string[]) => {
-  const tokenized = instructions.map(tokenize);
+export const main = (expressions: string[]) => {
+  const tokenized = expressions.map(tokenize);
 
   tokenized.forEach(tokens => console.log(tokens));
 };
 
-const instructions = process.argv.slice(2);
-if (instructions.length > 0) {
-  main(instructions);
+const expressions = process.argv.slice(2);
+if (expressions.length > 0) {
+  main(expressions);
 }
